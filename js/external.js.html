@@ -22,9 +22,13 @@
 </script>
 <script>
     let googleHours = prompt("How many hours did you work at Google?");
+    let googlePay = prompt("How much is Google paying per hour?");
     let amazonHours = prompt("How many hours did you work at Amazon?");
+    let amazonPay = prompt("How much is Amazon paying per hour?");
     let facebookHours = prompt("How many hours did you work at Facebook?");
-    let workTotal = (parseFloat(googleHours)* 400) + (parseFloat(amazonHours) * 380) + (parseFloat(facebookHours) * 350);
+    let facebookPay = prompt("How much is Facebook paying per hour?")
+    let workTotal = (parseFloat(googleHours)* parseFloat(googlePay)) + (parseFloat(amazonHours) * parseFloat(amazonPay))
+        + (parseFloat(facebookHours) * parseFloat(facebookPay));
     alert("Your income this week is $" + workTotal);
 </script>
 <script>
@@ -44,7 +48,7 @@
     if (offerAvailable === true)
         alert("The Discount will be applied!");
     else
-        alert("The discount will not be applied, I'm so sorry");
+        alert("The discount will not be applied, I'm so sorry.");
 </script>
 </body>
 </html>

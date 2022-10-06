@@ -50,3 +50,43 @@
 // How many inputs?
 // What type of input?
 // What type of output?
+
+function returnFive() {
+    return 5
+}
+console.log(returnFive());
+
+    function isFive(number) {
+    return number === 5 || number ==='5'
+}
+    console.log(isFive(1))
+    console.log(isFive(2.5))
+    console.log(isFive(5))
+    console.log(isFive('5'))
+    console.log(isFive('five'))
+    console.log(isFive(5.0))
+
+    const isShortWord = (string) => string.length <5;
+    console.log(isShortWord("Hi"))
+    console.log(isShortWord("Hello"))
+    console.log(isShortWord("Welcome"))
+    console.log(isShortWord("Howdy"))
+
+
+    function isSameLength(string1,string2) {
+    return string1.length === string2.length
+}
+    console.log(isSameLength("seven", "Hello"));
+    console.log(isSameLength("red", "solo"));
+    console.log(isSameLength("blue", "pizza"));
+    console.log(isSameLength("howdy", "hello"));
+
+    let globalVar = "Hello , I'm a global";
+
+    function test() {
+    let localVar = "Hello, I'm local!"
+    console.log(globalVar);
+}
+    test();
+
+    console.log(localVar);

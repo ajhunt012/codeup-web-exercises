@@ -1,4 +1,5 @@
 "use strict";
+(function(){
     /**
      * TODO:
      * Create a function called 'sayHello' that takes a parameter 'name'.
@@ -7,8 +8,8 @@
      * Example
      * > sayHello("codeup") // returns "Hello, codeup!"
      */
-    function sayHello(string) {
-        return ("Hello " + (name))
+    function sayHello(name) {
+        return ("Hello " + (name));
     }
     /**
      * TODO:
@@ -18,17 +19,16 @@
      * console.log 'helloMessage' to check your work
      */
 
-name = "AJ";
 let helloMessage = sayHello("AJ");
 console.log(helloMessage);
+
     /**
      * TODO:
      * Store your name as a string in a variable named 'myName', and pass that
      * variable to the 'sayHello' function. You should see the same output in the
      * console.
      */
-    let myName = "Austin"
-
+    let myName = "Austin";
 console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -53,9 +53,10 @@ console.log(sayHello(myName));
      * number)
      */
     function isTwo(num) {
-        return num == 2 ;
+        return num === 2 ;
     }
-console.log(isTwo(random))
+console.log(isTwo(random));
+
     /**
      * TODO:
      * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -101,3 +102,5 @@ function applyDiscount(number) {
     return ( originalPrice - (originalPrice * discountPercent));
 }
 alert("Your total is $" + applyDiscount());
+
+})();

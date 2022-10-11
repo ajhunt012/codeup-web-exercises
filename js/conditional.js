@@ -23,23 +23,23 @@
  * Test your function by passing various string literals to it and* console.logging the function's return value
  *  */
 
-function analyzeColor(color) {
-    if (color === "blue") {
-        return "Blue is the color of the ocean.";
-    } else if (color === "red") {
-        return  "Red is the color of the sunset over the ocean.";
-     } else if (color ==="green") {
-        return "Green is the color of the 'Codeup' logo.";
-     } else if (color === "yellow") {
-         return "DON'T EAT THE YELLOW SNOW!!!";
-     } else if (color ==="orange") {
-        return "Orange is the color if a good fire.";
-     } else if ( color=== "sanguine") {
-        return "Sanguine is the color of blood, my brother.";
-     } else {
-        return ("I don't know anything that fits that color, sorry.");
-     }
- }
+// function analyzeColor(color) {
+//     if (color === "blue") {
+//         return "Blue is the color of the ocean.";
+//     } else if (color === "red") {
+//         return  "Red is the color of the sunset over the ocean.";
+//      } else if (color ==="green") {
+//         return "Green is the color of the 'Codeup' logo.";
+//      } else if (color === "yellow") {
+//          return "DON'T EAT THE YELLOW SNOW!!!";
+//      } else if (color ==="orange") {
+//         return "Orange is the color if a good fire.";
+//      } else if ( color=== "sanguine") {
+//         return "Sanguine is the color of blood, my brother.";
+//      } else {
+//         return ("I don't know anything that fits that color, sorry.");
+//      }
+//  }
 // console.log(analyzeColor("blue"))
 // console.log(analyzeColor("red"))
 // console.log(analyzeColor("yellow"))
@@ -62,29 +62,30 @@ console.log(analyzeColor(randomColor))
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-
-        switch (randomColor) {
-            case "blue" :
-                alert("Blue is the color of the ocean.");
-                break;
-            case "red":
-                alert("Red is the color of the sunset over the ocean.");
-                break;
-            case "green":
-                alert("Green is the color of the 'Codeup' logo.");
-                break;
-            case "yellow":
-                alert("DON'T EAT THE YELLOW SNOW!!!");
-                break;
-            case "orange":
-                alert("Orange is the color if a good fire.");
-                break;
-            case "sanguine":
-                alert("Sanguine is the color of blood, my brother.");
-                break;
-            default:
-                alert("I don't know anything that fits that color, sorry.");
-        }
+function analyzeColor(color) {
+    switch (randomColor) {
+        case "blue" :
+            alert("Blue is the color of the ocean.");
+            break;
+        case "red":
+            alert("Red is the color of the sunset over the ocean.");
+            break;
+        case "green":
+            alert("Green is the color of the 'Codeup' logo.");
+            break;
+        case "yellow":
+            alert("DON'T EAT THE YELLOW SNOW!!!");
+            break;
+        case "orange":
+            alert("Orange is the color if a good fire.");
+            break;
+        case "sanguine":
+            alert("Sanguine is the color of blood, my brother.");
+            break;
+        default:
+            alert("I don't know anything that fits that color, sorry.");
+    }
+}
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -93,6 +94,8 @@ console.log(analyzeColor(randomColor))
  */
 let choice = prompt("Choose a color.")
 alert(analyzeColor(choice))
+
+//alert(analyzeColor(prompt('Choose a color")))
 
 /* ########################################################################## */
 
@@ -122,20 +125,15 @@ alert(analyzeColor(choice))
 // const calculateTotal = (total, discount) => {
 //     if (discount == 0 || discount >5) {
 //         alert("You didn't receive a discount")
-//     }
-//     else if (discount === 1) {
+//     }else if (discount === 1) {
 //         alert("Your total was $" + total + " & after your lucky discount is: $" + (total - (total*.1)))
-//     }
-//     else if (discount === 2) {
+//     }else if (discount === 2) {
 //         alert("Your total was $" + total + " & after your lucky discount is: $" + (total - (total*.25)))
-//     }
-//     else if (discount === 3) {
+//     }else if (discount === 3) {
 //         alert("Your total was $" + total + " & after your lucky discount is: $" + (total - (total*.35)))
-//     }
-//     else if (discount === 4) {
+//     }else if (discount === 4) {
 //         alert("Your total was $" + total + " & after your lucky discount is: $" + (total - (total*.50)))
-//     }
-//     else if (discount === 5) {
+//     }else if (discount === 5) {
 //         alert("Your total was $" + total + " & after your lucky discount is: FREE!")
 //     }
 // }
@@ -198,29 +196,53 @@ calculateTotal(total, discount)
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-
-function numberEntered(number) {
-    const numberPrompt = confirm('Would you like to enter a number?')
-    if (numberPrompt === true) {
-        let numberChoice = parseFloat(prompt('Enter a number.'));
+const numberPrompt = (num) => {
+    let confirmNumber = confirm("Would you like to enter a number?")
+    if (confirmNumber === true) {
+        let num = parseFloat(prompt("Enter your number."))
+        if (typeof num !== isNaN) {
+            return (alert("This is not a number!"));
+        } if  (num % 2 === 0) {
+            alert("Your number is even.")
+        } else {
+            alert("Your number is odd.")
+        }
+        alert("Your number +100 is: " + (num + 100))
+        if (num < 0 ) {
+            alert("Your number is negative.")
+        } else if (num > 0) {
+            alert("Your number is positive.")
+        } else {
+            alert("Your number is neither negative nor positive.")
+        }
     } else {
-        alert('Thanks you.')
-    }
+        alert("Thank you!")
+    }return num
 }
-if ( numberChoice % 2 === 0 ) {
-    alert('Your number is even.');
-} else {
-    alert("Your number is odd.");
-}
-alert('Your number /+100 = ' + (numberChoice + 100));
+    numberPrompt()
+/*
 
-if(numberChoice === 0) {
-    alert('Your number is neither positive nor is it negative.');
-} else if (numberChoice > 0) {
-    alert('Your number is positive.');
-} else {
-    alert("Your number is negative.");
+function(doesUserConfirm) {
+if (doesUserConfirm)
+let userNum = parseFloat(prompt('pick a number."));
+if(userNum ===0 ) {
+alert("Number is neither negative nor positive. );
+alert(Number is not a negative or a positive.")
+alert("Your number plus 100 is " + (userNum + 100);
+} else{
+if(!isNaN(userNum)) {
+alert(userNum % 2 === 0 ? "Number is even" : "number is odd" );
+alert(userNum > 0 ? "Number is positive" : "Number is negative.")
+alert("Your number plus 100 is " + (userNum + 100)
 }
+}
+
+let doesUserConfirm = confirm("Do you want to play a game?");
+
+if(doesUserConfirm) {
+doesUserConfirm
+}
+*/
 
 
 })();

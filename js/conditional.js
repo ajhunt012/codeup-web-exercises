@@ -19,11 +19,11 @@
  *
  * You should use an if-else-if-else block to return different messages.
  *
- * Test your function by passing various string literals to it and
- * console.logging the function's return value
- */
- function analyzeColor(color) {
-     if (color === "blue") {
+ * Test your function by passing various string literals to it and* console.logging the function's return value
+ *  */
+
+function analyzeColor(color) {
+    if (color === "blue") {
         return "Blue is the color of the ocean.";
     } else if (color === "red") {
         return  "Red is the color of the sunset over the ocean.";
@@ -55,17 +55,14 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+console.log(randomColor)
 console.log(analyzeColor(randomColor))
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-let choice = prompt("what is your favorite color?")
 
-    if(choice === colors) {
-        alert(analyzeColor)
-
-        switch (choice) {
+        switch (randomColor) {
             case "blue" :
                 alert("Blue is the color of the ocean.");
                 break;
@@ -86,15 +83,15 @@ let choice = prompt("what is your favorite color?")
                 break;
             default:
                 alert("I don't know anything that fits that color, sorry.");
-                break;
         }
-    }
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+let choice = prompt("Choose a color.")
+alert(analyzeColor(choice))
 
 /* ########################################################################## */
 
@@ -117,6 +114,28 @@ let choice = prompt("what is your favorite color?")
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+function calculateTotal(discount, total) {
+    switch (parseFloat(luckyNumber)){
+        case 0:
+            console.log(totalSpent)
+            break;
+        case 1:
+            console.log(totalSpent*(.90))
+            break;
+        case 2:
+            console.log(totalSpent*(.75))
+            break;
+        case 3:
+            console.log(totalSpent*(.65))
+            break;
+        case 4:
+            console.log(totalSpent*(.50))
+            break;
+        case 5:
+            console.log("Winner winner chicken dinner, everything is free for you!!!")
+    }
+}
+
 
 /**
  * TODO:
@@ -126,8 +145,11 @@ let choice = prompt("what is your favorite color?")
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-// Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+ //Generate a random number between 0 and 6
+ var luckyNumber = Math.floor(Math.random() * 6);
+console.log(luckyNumber)
+ let totalSpent = parseFloat(prompt("What is your total bill?"))
+alert(calculateTotal())
 
 /**
  * TODO:

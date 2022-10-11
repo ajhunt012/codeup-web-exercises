@@ -1,4 +1,5 @@
 "use strict";
+(function(){
 
 
 /* ########################################################################## */
@@ -114,27 +115,30 @@ alert(analyzeColor(choice))
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-function calculateTotal(discount, total) {
-    switch (parseFloat(luckyNumber)){
-        case 0:
-            console.log(totalSpent)
-            break;
-        case 1:
-            console.log(totalSpent*(.90))
-            break;
-        case 2:
-            console.log(totalSpent*(.75))
-            break;
-        case 3:
-            console.log(totalSpent*(.65))
-            break;
-        case 4:
-            console.log(totalSpent*(.50))
-            break;
-        case 5:
-            console.log("Winner winner chicken dinner, everything is free for you!!!")
-    }
-}
+//let totalSpent = parseFloat(prompt("What is your total bill?"))
+
+// alert("Your lucky number is " + luckyNumber)
+
+// const calculateTotal = (total, discount) => {
+//     if (discount == 0 || discount >5) {
+//         alert("You didn't receive a discount")
+//     }
+//     else if (discount === 1) {
+//         alert("Your total was $" + total + " & after your lucky discount is: $" + (total - (total*.1)))
+//     }
+//     else if (discount === 2) {
+//         alert("Your total was $" + total + " & after your lucky discount is: $" + (total - (total*.25)))
+//     }
+//     else if (discount === 3) {
+//         alert("Your total was $" + total + " & after your lucky discount is: $" + (total - (total*.35)))
+//     }
+//     else if (discount === 4) {
+//         alert("Your total was $" + total + " & after your lucky discount is: $" + (total - (total*.50)))
+//     }
+//     else if (discount === 5) {
+//         alert("Your total was $" + total + " & after your lucky discount is: FREE!")
+//     }
+// }
 
 
 /**
@@ -146,10 +150,35 @@ function calculateTotal(discount, total) {
  * price before the discount was, and what their price after the discount is.
  */
  //Generate a random number between 0 and 6
- var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
 console.log(luckyNumber)
- let totalSpent = parseFloat(prompt("What is your total bill?"))
-alert(calculateTotal())
+
+let discount = Math.floor(Math.random() * 5) + 1;
+alert("Your lucky number is: " + discount)
+let total = prompt("What's your total checkout price?")
+const calculateTotal = (total, discount) => {
+    if (discount == 0 || discount >5) {
+        alert("You didn't receive a discount")
+    }
+    else if (discount === 1) {
+        alert("Your total was $" + total + " & after your discount is: $" + (total - (total*.1)))
+    }
+    else if (discount === 2) {
+        alert("Your total was $" + total + " & after your discount is: $" + (total - (total*.25)))
+    }
+    else if (discount === 3) {
+        alert("Your total was $" + total + " & after your discount is: $" + (total - (total*.35)))
+    }
+    else if (discount === 4) {
+        alert("Your total was $" + total + " & after your discount is: $" + (total - (total*.50)))
+    }
+    else if (discount === 5) {
+        alert("Your total was $" + total + " & after your discount is:  FREE!")
+    }
+}
+calculateTotal(total, discount)
+
+
 
 /**
  * TODO:
@@ -170,3 +199,28 @@ alert(calculateTotal())
  * HINT: The way we prompt for a value could be improved
  */
 
+function numberEntered(number) {
+    const numberPrompt = confirm('Would you like to enter a number?')
+    if (numberPrompt === true) {
+        let numberChoice = parseFloat(prompt('Enter a number.'));
+    } else {
+        alert('Thanks you.')
+    }
+}
+if ( numberChoice % 2 === 0 ) {
+    alert('Your number is even.');
+} else {
+    alert("Your number is odd.");
+}
+alert('Your number /+100 = ' + (numberChoice + 100));
+
+if(numberChoice === 0) {
+    alert('Your number is neither positive nor is it negative.');
+} else if (numberChoice > 0) {
+    alert('Your number is positive.');
+} else {
+    alert("Your number is negative.");
+}
+
+
+})();

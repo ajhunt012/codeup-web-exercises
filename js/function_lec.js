@@ -83,7 +83,7 @@ console.log(returnFive());
 
     let globalVar = "Hello , I'm a global";
 
-    function test() {
+    function test(variable) {
     let localVar = "Hello, I'm local!"
     console.log(globalVar);
 }

@@ -28,7 +28,7 @@
 
         for (let i=1; i<=9; i++){
             let pyramid = "";
-            for (let j=1; j<=i; j++) {
+            for (let m=1; m<=i; m++) {
                 pyramid+=i
             }
             console.log(pyramid)

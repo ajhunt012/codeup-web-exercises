@@ -2,6 +2,7 @@
     "use strict";
 
     function showMultiplicationTable(num) {
+        console.log(num * 1)
         console.log(num * 2)
         console.log(num * 3)
         console.log(num * 4)

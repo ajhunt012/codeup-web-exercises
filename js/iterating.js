@@ -6,7 +6,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-let names = ['Will', 'Matt', 'Mark', 'Wade']
+let names = ['Will', 'Bob', 'Mark', 'Wade']
 
     /**
      * TODO:
@@ -21,7 +21,10 @@ let names = ['Will', 'Matt', 'Mark', 'Wade']
      * accessing each element's index.
      */
 
-console.log(names);
+console.log(names[0]);
+console.log(names[1]);
+console.log(names[2]);
+console.log(names[3]);
 
     /**
      * TODO:
@@ -37,6 +40,11 @@ console.log(names);
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+
+    names.forEach(name => console.log(name));
+
+    //or
+
     names.forEach(function(names) {
         console.log("Some names provided are, " + names)
     });
@@ -55,7 +63,7 @@ console.log(names);
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 let numbers = [1, 2, 3, 4, 5];
-let lastIndex = numbers.length
+
     function first(Arr){
         return Arr[0];
     }
@@ -63,10 +71,12 @@ let lastIndex = numbers.length
         return Arr[1]
     }
     function last(Arr){
-        return (lastIndex)
+        return Arr[Arr.length - 1];
     }
+
 console.log(first(numbers))
 console.log(second(numbers))
-console.log(last(numbers[lastIndex]))
+console.log(last(numbers))
+
 
 })();

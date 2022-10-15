@@ -33,5 +33,14 @@ for( let i = lastIndex; i >= 0; i--) {
 }
 // names.forEach(function(element, index, array))
 names.forEach(function(names) {
-    console.log("Some real good names are, " +names)
+    console.log("Some real good names are, " + names)
 });
+Array.isArray(names);
+// will return a boolean checking for Array as it shows as an object.
+
+
+//The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. This method returns an array containing the deleted elements.
+names.splice(2, 1, "Jamie");
+console.log(names);
+
+

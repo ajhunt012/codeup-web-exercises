@@ -24,8 +24,14 @@
      * string, and <li> tags around each planet.
      */
 
-    let planetString = <ul>("<li>Venus</li> <br></br> <li>Earth</li> <br></br> <li>Mars</li> <br></br> <li>Jupiter</li> <br></br> <li>Saturn</li> <br></br> <li>Uranus</li> <br></br> <li>Neptune</li> ")</ul>;
+    // let planetString = <ul>("<li>Venus</li> <br></br> <li>Earth</li> <br></br> <li>Mars</li> <br></br> <li>Jupiter</li> <br></br> <li>Saturn</li> <br></br> <li>Uranus</li> <br></br> <li>Neptune</li> ")</ul>;
 
-    console.log(planetString);
+
+    let planetV = planetsArray.join('<br>');
+    console.log(planetV);
+
+    // function lists(){
+     //}
+
 
 })();

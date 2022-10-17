@@ -10,7 +10,7 @@
      * planetsArray.
      * console.log planetsArray to check your work
      */
-
+let planetsString = []
     // console.log(planetsArray);
 
     /**

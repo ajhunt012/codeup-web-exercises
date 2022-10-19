@@ -11,10 +11,12 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-let person= {};
-person.firstName = "Austin";
-person.secondName = "Hunt";
-    console.log(person);
+let person= {
+        firstName: "Austin",
+        secondName: "Hunt"
+    };
+    console.log(person.firstName);
+    console.log(person.secondName);
 
     /**
      * TODO:
@@ -25,9 +27,15 @@ person.secondName = "Hunt";
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+person.sayHello = function(){
+    return (`Hello from ${person.firstName} ${person.secondName} !`);
+}
+console.log(person.sayHello());
+
+//or you can use.
 
     function sayHello(name1, name2){
-        return (" Hello from, " + name1 +" " + name2 + " !")
+        return ("Hello from " + name1 +" " + name2 + " !")
     }
     console.log(sayHello(person.firstName, person.secondName));
 
@@ -45,17 +53,21 @@ person.secondName = "Hunt";
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
-    // let shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    let shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
 
-    // shoppers.forEach(function(name) {
-    //     shoppers.amount.forEach(function (amount) {
-    //         console.log(amount);
-    //     });
-    // });
+    shoppers.forEach(function(shopper) {
+        let discountAmount = (shopper.amount - (shopper.amount * 0.12))
+        let discountTotal = shopper.amount - discountAmount;
+        if(shopper.amount > 200){
+            console.log(`Hi ${shopper.name}, your previous total was ${shopper.amount}, and your new total after the applied discount of $${discountAmount.toFixed(2)} to bring your grand total to ${discountTotal}`)
+        } else {
+            console.log(`Hello ${shopper.name}, your total is $${shopper.amount.toFixed(2)}`);
+        }
+    });
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -71,7 +83,7 @@ person.secondName = "Hunt";
      */
 
 let books = [{
-    title: "The Night angel",
+    title: "The Night Angel",
         author: {
             firstName: "Brett",
             lastName: "Weeks"
@@ -107,6 +119,12 @@ let books = [{
         }
 ];
 
+console.log(books[2].title);
+console.log(books[2].author.firstName);
+console.log(books[2].author.lastName);
+
+
+
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -129,13 +147,16 @@ let books = [{
      *      Title: A Brief History of Time
      *      Author: Stephen Hawking
      *      ---
-     *      ...
      */
-console.log(books[0])
-console.log(books[1])
-console.log(books[2])
-console.log(books[3])
-console.log(books[4])
+
+    for(let i = 0; i < books.length; i++ ) {
+        console.log(`Book # ${i + 1}`);
+        console.log(`Title: ${books[i].title} `);
+        console.log("Author: " +  books[i].author.firstName + " " + books[i].author.lastName);
+        console.log("---");
+
+
+    }
 
     /**
      * Bonus:
@@ -147,5 +168,35 @@ console.log(books[4])
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(title, author){
+        author = author.split(" ");
+        let book = {
+            title: title,
+            author: {
+                firstName: author[0],
+                lastName: author [1]
+            }
+        }
+        return book;
+    }
+    books.push(createBook('Meditation', 'Marcus Aurelius'));
+    console.log(books);
+
+    function showBookInfo(book){
+        console.log(`Book # ${books.indexOf(book)+1 }`);
+        console.log(`Title: ${book.title}`);
+        console.log(`Title: ${book.author.firstName} ${book.author.lastName}`);
+    }
+
+
+    for (let i=0; i<books.length; i++){
+        showBookInfo(books[i]);
+    }
+
+
+    console.log(books[1]);
+
+
 
 })();

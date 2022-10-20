@@ -139,8 +139,9 @@ function multiplyBy2(input) {
 //------simplified version-----//
 
 function isNumeric(input) {
-    return !isNaN(parseFloat(input));
+    return !isNaN(parseFloat(input))
 }
+
 
 
 //6.Define a function named convertHourToSec that takes in one input Hours. Return the conversation of the number of hours into total seconds. If the input is not numeric or a numeric string, convertHourToSec, should return false.

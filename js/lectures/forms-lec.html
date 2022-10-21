@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Lecture</title>
+</head>
+<body>
+<p>
+<form method="POST" action="https://request-inspector.glitch.me/">
+    <!--      input elements-->
+  <form action="https://request-inspector.glitch.me" method="GET">
+    <label for="zipcode">Zipcode</label> <input type="text" name="zipcode" id="zipcode" placeholder="input a zipcode" value="75555">
+
+      <button type="submit">Search</button>
+      <br>
+      <input type="datetime-local" name="datetime" id="datetime"/> <button type="submit">Search</button>
+  </form>
+    <label for="Tweet"></label>
+    <textarea id="tweet" cols="25" rows="15" style="resize: none" placeholder="Tell me a little about yourself here:"></textarea>
+    <br>
+<label for="username">Username:</label>
+<input id="username" name="username" type="text" placeholder="enter username:">
+<br>
+    <input type="hidden" name="user_id" id="Icon_Cohort">
+
+<label for="password">Password:</label>
+<input id="password" name="password" type="text" placeholder="enter password:">
+    <button>Submit</button>
+    <label for="Email">Email</label>
+    <input type="Email" name="Email" id="Email" required> </input>
+    <button type="submit" disabled>Submit</button>
+    <br>
+    <input type="file" name="FileUpload"></input>
+    <br>
+    <br>
+    <label for="Usernames"></label>
+    <input type="text" name="Usernames" id="Usernames" placeholder="Enter your Usernames here:">
+    <br>
+    <br>
+    <label for="email">email;</label>
+    <input type="email" name="email" id="email" placeholder="Exampleemail@email.com">
+    <button type="submit">Submit</button>
+    <br>
+    <br>
+    <label for="FavColor">What is your favorite color?</label>
+    <label for="blue">blue</label>
+    <input type="radio" name="FavColor" id="blue">
+    <label for="red">red</label>
+    <input type="radio" name="FavColor" id="red" checked>
+    <label for="green">green</label>
+    <input type="radio" name="FavColor" id="green">
+    <button type="submit">Submit</button>
+    <br>
+    <br>
+    <label for="Language">What Languages do you know?</label>
+    <label for="Java">java</label>
+    <input type="checkbox" name="Language" id="java" checked>
+    <label for="CSS">Css</label>
+    <input type="checkbox" name="Language" id="CSS">
+    <label for="React">React</label>
+    <input type="checkbox" name="Language" id="React">
+    <button type="submit">Submit</button>
+    <br>
+    <br>
+    <select name="pizzaTopping" id="pizzaTopping">
+        <option value="Pepperoni">Pepperoni</option>
+        <option value="Mushrooms">Mushrooms</option>
+        <option value="Bacon" selected>Bacon</option>
+        <option value="Sausage">Sausage</option>
+        <option value="Shrimp">Shrimp</option>
+    </select>
+    <button type="button">Submit</button>
+    <br>
+    <br>
+    <label for="volume"></label>
+    <input type="range" min="01" max="111" name="volume" id="volume">
+    <button type="submit">Submit</button>
+
+</form>
+</body>
+</html>

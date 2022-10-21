@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+<style>.tab4 { tab-size: 8; }</style>
+</head>
+<body style="background-color: aquamarine;">
+<header>
+    <h1 style="color: darkblue">Register With Us:</h1>
+</header>
+<main>
+    <marquee style="color: crimson">Register With Us Today, Or Else!!!!!!</marquee>
+    <hr>
+    <form>
+        <form method="GET" action="https://request-inspector.glitch.me/">
+          <section>
+                <label for="email">Enter your email address: </label>
+                <input type="email" name="email" id="email" placeholder="Email:" required>
+              <br>
+                <label for="password">Enter your Password: </label>
+                <input type="password" name="password" id="password" placeholder="Password:" required>
+              <br>
+          </section>
+            <section>
+                <br>
+                <label for="bio">Bio:</label><br>
+                <textarea name="bio" rows="10" cols="30" placeholder="Please tell us a little bit about yourself." ></textarea>
+            </section>
+            <br>
+            <section>
+                <fieldset>
+                    <legend>How did you hear about us?</legend>
+                <label for="survey" name="survey"></label>
+                <input type="checkbox" name="survey" id="billboard">
+                    <label for="billboard">Billboard</label>
+                <input type="checkbox" name="survey" id="Radio advertisement">
+                    <label for="radio advertisement">Radio advertisement</label>
+                    <input type="checkbox" name="survey" id="internet advertisement">
+                    <label for="internet advertisement">Internet advertisement</label>
+                <input type="checkbox" name="survey" id="other" checked>
+                    <label for="other">Other</label>
+                    <br>
+                <input type="submit"></input
+                </fieldset>
+            </section>
+            <hr>
+            <section>
+                <fieldset>
+                    <legend>What web browser are you currently using?</legend>
+                <label for="web browser"></label>
+                <select name="web browser" id="web browser">
+                    <option value="safari">Safari</option>
+                    <option value="internet explorer">Internet Explorer</option>
+                    <option value="firefox">Mozilla Firefox</option>
+                    <option value="chrome">Google Chrome</option>
+                    <option value="unknown" selected>Other</option>
+                </select>
+                <input type="submit"></input>
+                </fieldset>
+            </section>
+
+    </form>
+</main>
+
+</body>
+</html>

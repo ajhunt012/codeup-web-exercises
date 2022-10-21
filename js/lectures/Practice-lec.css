@@ -1,0 +1,68 @@
+/*Element Selector*/
+h1, h2, h3  {
+    color: purple;
+}
+
+/*class selector*/
+.underline, .italicize{
+    text-decoration: underline;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+/*Tip hitting p.underline and then tab will give you will build a paragraph block for you to work with*/
+/*you can stack classes on a style they are seperated with a space */
+
+p, .underline{
+    background-color: orangered;
+}
+
+/*Targets anything with an id of email*/
+#email {
+    color: antiquewhite;
+}
+
+/*parent to descendant to get more and more specific*/
+#div .Test {
+    color: forestgreen;
+}
+
+#div>Test>so on and> so forth {
+
+}
+
+/*  Targets the Li elements that has the class of highlight and an id of underline */
+li.highlight#underline {
+
+}
+
+/*psudeo classes*/
+
+/* unvisited link (:link) */
+a:link {
+    color:red;
+}
+
+/* visited link (:visited) */
+a:visited {
+    color:black;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:blue;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color:green;
+}
+
+/*file pathway for the image does not exist on this computer, sizes can also be set to percentages, em 2x the font size, vh & vw is the viewheight and viewwidth, px is the amount of pixels. can adjust the viewport which is the amount of the page you can see at that point in time. will adjust if the browser window is shrunk. */
+
+.teambuilding {
+    background-image: url("../img/pick2.jpg");
+    background-size: cover;
+    height: 600px;
+    width: 20em;
+}

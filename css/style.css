@@ -10,11 +10,12 @@ h1, .fancy-header{
 h2 {
     color: darkslateblue;
     font-weight: bolder;
+    text-decoration: underline;
 }
 
-/*#container {*/
-/*    background-color: bisque;
-} */
+html{
+   background-color: cyan;
+}
 
 
 body {
@@ -22,7 +23,7 @@ body {
 }
 
 ul {
-    list-style-type: upper-roman;
+    list-style-type: georgian;
 }
 
 font{
@@ -39,12 +40,14 @@ table, td{
     border-color: black;
 }
 
+
 a:link {
     color:blue;
 }
 
 a:visited {
-    color:black;
+    color:red;
+    font-weight: bolder;
 }
 
 a:hover {

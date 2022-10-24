@@ -3,3 +3,54 @@
     text-decoration: underline;
 }
 
+h1, .fancy-header{
+ text-align: center;
+}
+
+h2 {
+    color: darkslateblue;
+    font-weight: bolder;
+}
+
+/*#container {*/
+/*    background-color: bisque;
+} */
+
+
+body {
+    background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=1380&t=st=1666620980~exp=1666621580~hmac=1c0e01d22da31716bdf7903e59315a58edd861d7a9775f9b87cd425130fa91b9") ;
+}
+
+ul {
+    list-style-type: upper-roman;
+}
+
+font{
+    font-family: Copperplate, Papyrus, fantasy ;
+}
+
+table, td{
+    border-style: solid;
+    font-family: "Comic Sans MS",sans-serif;
+    width: 15px;
+    padding: 10px;
+    text-align-all: center;
+    font-size: large;
+    border-color: black;
+}
+
+a:link {
+    color:blue;
+}
+
+a:visited {
+    color:black;
+}
+
+a:hover {
+    color:purple;
+}
+
+a:active {
+    color:gold;
+}

@@ -102,13 +102,41 @@
             if (isNumeric(array[i])) {
                 sum += parseFloat(array[i]);
                 i++;
-            } else{
+            } else {
                 return false;
             }
         }
         return sum / array.length;
     }
 
+
+    // Warm-up:
+    //
+    // Create a function named "filterNegativity" that accepts an array of numbers, and returns an array with only positive numbers.
+    //
+    //     Ex: filterNegativity([5, -6, 2, 0, -5, -13]) // returns [5, 2, 0,]
+    let myArr = [5, -6, 2, 0, -5, -13];
+
+
+    const filterNegativity = (array) => {
+        let posArray = [];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] >= 0) {
+                posArray.push(array[i])
+            }
+        }
+        return posArray;
+    }
+
+    //or you can use a filter method
+
+//     function filterNegativity(array) {
+//     let passedArray = array.filter(num => num > -1)
+//     return passedArray;
+// }
+
+
+console.log(filterNegativity(myArr));
 
 
 })();

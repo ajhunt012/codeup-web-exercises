@@ -36,7 +36,7 @@ li.highlight#underline {
 
 }
 
-/*psudeo classes*/
+/*pseudo classes*/
 
 /* unvisited link (:link) */
 a:link {
@@ -60,9 +60,9 @@ a:active {
 
 /*file pathway for the image does not exist on this computer, sizes can also be set to percentages, em 2x the font size, vh & vw is the viewheight and viewwidth, px is the amount of pixels. can adjust the viewport which is the amount of the page you can see at that point in time. will adjust if the browser window is shrunk. */
 
-.teambuilding {
-    background-image: url("../img/pick2.jpg");
-    background-size: cover;
-    height: 600px;
-    width: 20em;
-}
+/*.team-building {*/
+/*    background-image: url("../img/pick2.jpg");*/
+/*    background-size: cover;*/
+/*    height: 600px;*/
+/*    width: 20em;*/
+/*}*/

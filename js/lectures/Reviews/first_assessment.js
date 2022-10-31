@@ -29,6 +29,7 @@
 // isAllLowerCase([1,2,3])                             // false
 // isAllLowerCase({fName: 'Bruce', lName: 'Wayne'})    // false
 
+
 //My answer: 100%
 // function isAllLowerCase(string){
 //     if (typeof string !== "string"){
@@ -49,7 +50,10 @@ or = {};
 //     }
 // }
 or = {};
+
 //  return typeof str === "string && str === str.toLowerCase();
+
+
 
 //3. Define a function named isAllUpperCase that takes in a string and returns true if all characters in the string are uppercase otherwise it should return false.
 // isAllUpperCase('CODEUP')                            // true
@@ -73,6 +77,8 @@ or = {};
 //         return true
 //     }
 // }
+
+
 
 //4. Define a function named isNotPalindrome that takes in a string and returns true if that string is not palindrome, if the string is palindrome should return false.
 // isNotPalindrome('Kayak')                             // false

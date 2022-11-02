@@ -2,6 +2,7 @@
     background-image: url("img/pizza.png");
     height: 346px;
     background-size: cover;
+    justify-content: center;
 }
 
 .wallpaper{

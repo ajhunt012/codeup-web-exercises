@@ -8,10 +8,6 @@ li {
     display: flex;
 }
 
-.icon-bar> ul {
-    display: inline-flex;
-    justify-content: space-around;
-}
 
 
 
@@ -28,10 +24,21 @@ li {
     /*    margin: 0;*/
     }
 
+    .icon-bar> ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
 }
 
 @media screen and (max-width: 767px) {
 
-
+    .icon-bar> ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 
     }

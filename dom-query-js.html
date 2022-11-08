@@ -48,13 +48,15 @@
         let listColor = document.querySelectorAll("li");
 
         for (let i = 0; i < listColor.length; i++) {
-            if(i % 2 !== 0)
+            if(i % 2 === 0)
             listColor[i].style.color = "grey";
         }
 
-        for (let i = 0; i < listColor.length; i++) {
-            if(i === 0)
-            listColor[i].style.color="blue";
+
+        for(let i = 0; i < listColor.length; i++) {
+            if(listColor[i].getAttribute("data-dbid") === "1") {
+                listColor[i].style.color = "blue"
+            }
         }
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph

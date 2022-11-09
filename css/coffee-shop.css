@@ -4,8 +4,8 @@
     border: 0;
 }
 
-html, body{
-    background-image:url("img/coffee_neon_text_193511_3840x2160.jpeg");
+html {
+    background-image:url("../img/coffee_neon_text_193511_3840x2160.jpeg");
     min-height: 100vh;
     width: 100%;
     background-position: center;

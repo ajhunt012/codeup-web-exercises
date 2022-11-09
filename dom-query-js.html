@@ -25,32 +25,46 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+
+<button type="button" id="headerBtn">Change Header</button>
+<button type="button" id="sub-headerBtn">Change Sub-Header to Blue</button>
+<button type="button" id="liBtn">Li Button </button>
+<button type="button" id="subparagraphBtn">Change subparagraph text</button>
+
 <script>
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-        let mainHeader = document.getElementById("main-header");
+            let mainHeader = document.getElementById("main-header");
+
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+    document.getElementById("headerBtn").addEventListener('click', function () {
          mainHeader.innerText = "Javascript is Cool";
+    });
 
         // TODO: Uncomment the next line and get the sub header element by id
         let subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
+        let subheaderBtn = document.getElementById('sub-headerBtn');
+        subheaderBtn.addEventListener('click', function (){
         subHeader.style.color = "blue";
-        
+        });
+
         // TODO: Uncomment the next line and get all list items
         let listItems = document.getElementsByTagName("li");
 
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
-        let listColor = document.querySelectorAll("li");
+        document.getElementById('liBtn').addEventListener("click", function () {
+            let listColor = document.querySelectorAll("li");
 
-        for (let i = 0; i < listColor.length; i++) {
-            if(i % 2 === 0)
-            listColor[i].style.color = "grey";
-        }
+            for (let i = 0; i < listColor.length; i++) {
+                if (i % 2 === 0)
+                    listColor[i].style.color = "grey";
+            }
+        });
 
 
         for(let i = 0; i < listColor.length; i++) {
@@ -63,7 +77,11 @@
         let subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!"
+        let subParagraphButton = document.getElementById('subparagraphBtn');
+        subParagraphButton.addEventListener('click', function (){
+            subParagraphs[0].innerHTML = "Mission Accomplished!";
+        })
+
     })();
 
 </script>

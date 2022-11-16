@@ -1,0 +1,14 @@
+.background{
+    display: flex;
+    margin-left: 282px;
+}
+
+html{
+    background-color: black;
+}
+h1, p{
+    display: flex;
+    color: #DDDDDD;
+    font-size: large;
+   justify-content: center;
+}

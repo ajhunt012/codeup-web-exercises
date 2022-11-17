@@ -9,6 +9,6 @@ html{
 h1, p{
     display: flex;
     color: #DDDDDD;
-    font-size: large;
+    font-size: x-large;
    justify-content: center;
 }

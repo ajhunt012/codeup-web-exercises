@@ -9,16 +9,15 @@ let allowedKeys = {
 };
 
 let konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a', 'enter'];
-
 let konamiCodePosition = 0;
 
 document.addEventListener('keydown', function(e) {
 
     let key = allowedKeys[e.keyCode];
     let requiredKey = konamiCode[konamiCodePosition];
-    if (key == requiredKey) {
+    if (key === requiredKey) {
         konamiCodePosition++;
-        if (konamiCodePosition == konamiCode.length) {
+        if (konamiCodePosition === konamiCode.length) {
             activateCheat();
             konamiCodePosition = 0;
         }
@@ -26,12 +25,10 @@ document.addEventListener('keydown', function(e) {
         konamiCodePosition = 0;
     }
 });
+let sound = new Audio('/Sounds/MGS-Alert.mp3');
 
 function activateCheat() {
-
-
-    //
-    // Audio(src="https://www.myinstants.com/en/instant/metal-gear-solid-alert/?utm_source=copy&utm_medium=share").autoplay
+    sound.play();
 
     alert("You have successfully infiltrated!")
     alert("You have added 30 lives!");

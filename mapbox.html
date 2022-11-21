@@ -9,7 +9,7 @@
     <style>
         #map {
             /* the width and height may be set to any size */
-            width: 100%;
+            width: 80%;
             height: 700px;
         }
     </style>
@@ -34,6 +34,24 @@
         zoom: 10,
         center: [-96.802944, 32.777995]
     });
+// adds marker to map
+
+    let marker = new mapboxgl.Marker()
+    .setLngLat([-96.802944, 32.777995])
+    .addTo(map);
+
+    // adds a popup window around the point of choice
+    let popup = new mapboxgl.Popup()
+        .setLngLat([-96.802944, 32.777995])
+        .setHTML("<h1>Dallas' Founder's Square!</h1><p>Codeup Rocks!</p>")
+        .addTo(map)
+
+    let Popup = new mapboxgl.Popup()
+        .setHTML("<p>McDonald's here sucks.</p>")
+        .addTo(map)
+    marker.setPopup(Popup)
+
+
 </script>
 </body>
 </html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geocode Examples</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="js/mapbox_maps_api.js">
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My Favorite Restaurants!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox Geocoder Util Methods -->
+<script src="js/mapbox-geocoder-utils.js"></script>
+
+<!-- Mapbox JS -->
+<script src="js/keys.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+<!-- Custom JS -->
+<script>
+    mapboxgl.accessToken = MAPBOX_TOKEN;
+    let map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom:15,
+        center: [139.66722, 35.28178]
+    });
+
+    // Ramen
+    // let marker = new mapboxgl.Marker()
+    //     .setLngLat([139.6634736328792, 35.281873196305156])
+    //     .addTo(map);
+    // let markerPopup = new mapboxgl.Popup()
+    //     .setHTML("<p>Honmokuya Yokosuka!</p><h6>AKA Ramen God!</h6>")
+    //
+    // marker.setPopup(markerPopup)
+
+// CoCo's
+//     let marker2 = new mapboxgl.Marker()
+//         .setLngLat([139.6633237794199, 35.28183606389544])
+//         .addTo(map);
+//     let marker2Popup = new mapboxgl.Popup()
+//         .setHTML("<p>CoCo Ichibanya</p><h6>Japanese styled curries of varying spice intensities.</h6>")
+//
+//     marker2.setPopup(marker2Popup)
+
+    // Mama's
+    // let marker3 = new mapboxgl.Marker()
+    //     .setLngLat([139.66953679916566, 35.28161369342858])
+    //     .addTo(map);
+    // let marker3Popup = new mapboxgl.Popup()
+    //     .setHTML("<p>Popola mama</p><h6>The best Italian food outside of Italy.</h6>")
+    //
+    // marker3.setPopup(marker3Popup)
+
+let restaurants = [
+    {
+        name: "Honmokuya Yokosuka",
+        location: [139.6634736328792, 35.281873196305156],
+        type: "Ramen",
+        image: ""
+    },
+    {
+        name: "CoCo Ichibanya",
+        location: [139.6633237794199, 35.28183606389544],
+        type: "Japanese style curry",
+    },
+    {
+        name: "Popola mama",
+        location: [139.66953679916566, 35.28161369342858],
+        type: "Italian",
+    },
+];
+
+
+    restaurants.forEach(function(restaurant){
+        var popup = new mapboxgl.Popup()
+            // .setHTML( '<img src="' + restaurant.image +  '"> "<h3>" + restaurant.name + "</h3> <p>" + restaurant.type + "</p>");
+        var marker = new mapboxgl.Marker()
+            .setLngLat(restaurant.location)
+            .addTo(map)
+            .setPopup(popup);
+        popup.addTo(map);
+    });
+
+
+</script>
+
+
+</body>
+</html>

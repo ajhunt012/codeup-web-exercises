@@ -1,5 +1,5 @@
 :root {
-    --ol: dashed red 2px;
+    --ol: dashed #130d05 2px;
     --bg-1: black;
     --bg-2: #D0CFCF;
     --bg-3: rgba(31, 76, 165, 0.6);
@@ -16,10 +16,6 @@ html, body {
 }
 
 html {
-    /*background-image: url("https://cdn.pixabay.com/photo/2018/08/23/07/35/thunderstorm-3625405_1280.jpg");*/
-    /*background-size: cover;*/
-    /*height: 100%;*/
-    /*width: 100%;*/
     font-family:Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 150%;
     line-height: 1.4;
@@ -47,7 +43,7 @@ body {
 
 h2 {
     font-family: 'Times New Roman', sans-serif;
-    color: #4a3a27;
+    color: #2f4a27;
     text-transform: uppercase;
     letter-spacing: 3vw;
     line-height: 1.2;
@@ -76,9 +72,6 @@ span {
     font-size: small;
 }
 
-.list-group-item{
-    background-color: var(--bg-3);
-}
 
 .card:hover {
     animation: bounce 20s ease-in infinite;
@@ -105,7 +98,6 @@ span {
     height: 75vh;
     margin-bottom: 1rem;
     display: flex;
-    /*margin-top: 1rem;*/
     border: black 2px solid;
 
 }

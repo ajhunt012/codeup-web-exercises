@@ -30,7 +30,7 @@
 
 
 
-                    //Drops a marker at the new location
+                    //new marker at location
                     let marker = new mapboxgl.Marker({color: 'crimson'})
 
                     marker.setDraggable(coordinates)
@@ -43,7 +43,6 @@
                         let coordinates = lngLat.toArray()
                         console.log(lngLat.toArray())
                         getWeatherData(coordinates)
-                        // console.log('Drag function:', 'lat:' + lngLat.lat, '/typeof: ' + typeof lngLat.lat, '/lng:' + lngLat.lng, '/typeof: ' + typeof lngLat.lng);
                     });
 
                     //Relay coordinates to weatherData
@@ -74,11 +73,11 @@
 
 
         })
-            // .fail(function (jqXhr, status, error) {
-            // console.log(jqXhr);
-            // console.log(status);
-            // console.log(error);
-        // });
+            .fail(function (jqXhr, status, error) {
+            console.log(jqXhr);
+            console.log(status);
+            console.log(error);
+        });
     }
 
 

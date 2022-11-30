@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Store</title>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Categories</th>
+  </tr>
+  </thead>
+  <tbody id="insertProducts"></tbody>
+</table>
+<button id="refresh_button" type="button">Click Me!</button>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script>
+  (function() {
+    "use strict";
+    var html1 = "";
+
+    function loadStoreList(){
+      $.get('data/inventory.json').done(function(data) {
+        console.log(data);
+        for (var i = 0; i <= data.length - 1; i++) {
+          html1 += "<tr>";
+          html1 += "<th>" + data[i].title + "</th>";
+          html1 += "<th>" + data[i].quantity + "</th>";
+          html1 += "<th>" + data[i].price + "</th>";
+          html1 += "<th>" + data[i].categories.join(', ') + "</th>";
+          html1 += "</tr>";
+        }
+        ;
+        $("#insertProducts").html(html1);
+      });
+    };
+
+    $(document).ready(function(){
+      loadStoreList();
+      $("#refresh_button").click(function(){
+        html1 = "";
+        $("#insertProducts").html(html1);
+        loadStoreList();
+
+      });
+    });
+
+  })();
+</script>
+
+</body>
+</html>

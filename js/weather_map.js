@@ -26,7 +26,7 @@
                 function getLatLong(coordinates) {
                     //Resets the map
                     map.setCenter(coordinates)
-                    map.setZoom(3)
+                    map.setZoom(6)
 
 
 

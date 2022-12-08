@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>First Mapbox Map</title>
+  <!-- Mapbox CSS -->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+  <!-- Custom CSS -->
+  <style>
+    #map {
+      /* the width and height may be set to any size */
+      width: 80%;
+      height: 350px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src="../js/keys.js"></script> <!-- 1. bring in keys file first -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="../js/mapbox-geocoder-utils.js"></script>
+
+<!-- Custom JS -->
+<script>
+  // mapboxgl.accessToken = MAPBOX_TOKEN; <!-- 2. add in mapbox token -->
+  // var map = new mapboxgl.Map({
+  //     container: 'map',
+  //     style: 'mapbox://styles/mapbox/streets-v9',
+  //     zoom: 10,
+  //     center: [-96.802944, 32.777995]
+  // });
+  //
+  // var marker = new mapboxgl.Marker()
+  //     .setLngLat([-96.802944, 32.777995]) //same as the starting point in map
+  //     .addTo(map);
+  //
+  // var popup = new mapboxgl.Popup()
+  //     //.setLngLat([-96.802944, 32.777995]) //same as the starting point in map
+  //     .setHTML("<h1>Dallas Founder's Square</h1><br><p>Codeup Rocks!</p>")
+  //     //.addTo(map)
+  //
+  // // var alamoPopup = new mapboxgl.Popup()
+  // //     .setHTML("<p>Remember The Alamo!</p>")
+  //
+  // marker.setPopup(popup)
+  //
+  // // the  geocode method from mapbox-geocoder-utils.js
+  // geocode("900 Jackson St #410, Dallas, TX 75202", MAPBOX_TOKEN).then(function(result) {
+  //     console.log(result);
+  //     map.setCenter(result);
+  //     map.setZoom(15);
+  // });
+  //
+  // // the reverse geocode method from mapbox-geocoder-utils.js
+  // reverseGeocode({lng: -96.802944, lat: 32.777995}, MAPBOX_TOKEN).then(function(results) {
+  //     // logs the address for Dallas Founder's Square
+  //     console.log(results);
+  // });
+
+  var accessToken = MAPBOX_TOKEN;
+
+  mapboxgl.accessToken = accessToken;
+
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    zoom: 10,
+    center: [-98.4916, 29.4252]
+  });
+
+  var alamoInfo = {
+    address: "300 Alamo Plaza",
+    popupHTML: "<p>Remember the Alamo!</p>"
+  };
+
+  function placeMarkerAndPopup(info, token, map) {
+    geocode(info.address, token).then(function(coordinates) {
+      var popup = new mapboxgl.Popup()
+              .setHTML(info.popupHTML);
+      var marker = new mapboxgl.Marker()
+              .setLngLat(coordinates)
+              .addTo(map)
+              .setPopup(popup);
+      popup.addTo(map);
+    });
+  }
+
+  placeMarkerAndPopup(alamoInfo, accessToken, map);
+
+</script>
+</body>
+</html>
